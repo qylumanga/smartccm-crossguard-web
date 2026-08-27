@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0b1220;
+  color: #e8ecf4;
+}
+
+::selection {
+  background-color: #4fa8ff;
+  color: #0b1220;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(229, 72, 77, 0.55); }
+  50% { box-shadow: 0 0 0 6px rgba(229, 72, 77, 0); }
+}
+.signal-pulse-red {
+  animation: pulse-red 2s ease-in-out infinite;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
